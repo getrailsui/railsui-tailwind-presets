@@ -1,6 +1,19 @@
 const plugin = require("tailwindcss/plugin")
 
 module.exports = plugin(function ({ addComponents, theme }) {
+  function hexToRgba(hex, opacity) {
+    // Remove the hash at the start if it's there
+    hex = hex.replace(/^#/, "")
+
+    // Parse the r, g, b values
+    let r = parseInt(hex.substring(0, 2), 16)
+    let g = parseInt(hex.substring(2, 4), 16)
+    let b = parseInt(hex.substring(4, 6), 16)
+
+    // Return the rgba color
+    return `rgba(${r}, ${g}, ${b}, ${opacity})`
+  }
+
   const buttons = {
     ".btn": {
       padding: `${theme("padding.2")} ${theme("padding.3")}`,
@@ -35,16 +48,6 @@ module.exports = plugin(function ({ addComponents, theme }) {
       "&:hover": {
         backgroundColor: `rgb(var(--primary-600) / 1)`,
       },
-      "&.btn-outline": {
-        backgroundColor: "transparent",
-        color: `rgb(var(--primary-500) / 1)`,
-        borderColor: `rgb(var(--primary-500) / 1)`,
-        "&:hover": {
-          backgroundColor: `rgb(var(--primary-500) / 1)`,
-          color: theme("colors.white"),
-          borderColor: `rgb(var(--primary-500) / 1)`,
-        },
-      },
     },
     ".btn-secondary": {
       backgroundColor: `rgb(var(--secondary-500) / 1)`,
@@ -67,56 +70,43 @@ module.exports = plugin(function ({ addComponents, theme }) {
       },
     },
     ".btn-dark": {
-      backgroundColor: theme("colors.slate.800"),
+      backgroundColor: theme("colors.slate.900"),
       color: theme("colors.white"),
       "&:focus": {
-        boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) theme('colors.slate.800/20%')`,
+        boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
+          theme("colors.slate.800"),
+          0.2
+        )}`,
       },
       "&:hover": {
-        backgroundColor: theme("colors.slate.900"),
-      },
-      "&.btn-outline": {
-        backgroundColor: "transparent",
-        color: theme("colors.slate.800"),
-        borderColor: theme("colors.slate.800"),
-        "&:hover": {
-          backgroundColor: theme("colors.slate.800"),
-          color: theme("colors.white"),
-          borderColor: theme("colors.slate.800"),
-        },
+        backgroundColor: theme("colors.slate.950"),
       },
       "@media (prefers-color-scheme: dark)": {
+        border: `1px solid ${theme("colors.slate.700")}`,
+        backgroundColor: theme("colors.slate.950"),
         "&:hover": {
           color: theme("colors.slate.100"),
-          backgroundColor: theme("colors.slate.700"),
+          backgroundColor: theme("colors.slate.950"),
         },
         "&:focus": {
-          boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) theme('colors.slate.800')`,
+          boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
+            theme("colors.slate.700"),
+            0.6
+          )}`,
         },
       },
     },
     ".btn-light": {
-      backgroundColor: theme("colors.slate.200"),
-      backgroundOpacity: theme("opacity.90"),
-      color: theme("colors.slate.700"),
+      backgroundColor: hexToRgba(theme("colors.slate.100"), 0.9),
+      color: theme("colors.slate.800"),
       "&:focus": {
-        boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) theme('colors.slate.300/20%')`,
+        boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
+          theme("colors.slate.300"),
+          0.2
+        )}`,
       },
       "&:hover": {
-        backgroundColor: theme("colors.slate.300"),
-        backgroundOpacity: theme("opacity.80"),
-        borderColorOpacity: theme("opacity.80"),
-      },
-      "&.btn-outline": {
-        backgroundColor: "transparent",
-        borderColor: theme("colors.slate.200"),
-        borderOpacity: theme("opacity.90"),
-        "&:hover": {
-          backgroundColor: theme("colors.slate.300"),
-          backgroundOpacity: theme("opacity.80"),
-          borderColor: theme("colors.slate.300"),
-          borderOpacity: theme("opacity.80"),
-        },
+        backgroundColor: hexToRgba(theme("colors.slate.300"), 0.8),
       },
     },
     ".btn-white": {
@@ -124,31 +114,27 @@ module.exports = plugin(function ({ addComponents, theme }) {
       color: theme("colors.slate.700"),
       border: `1px solid ${theme("colors.slate.300")}`,
       boxShadow: theme("boxShadow.sm"),
-      shadowColor: theme("colors.slate.300"),
-      shadowOpacity: theme("opacity.20"),
+      "--tw-shadow-color": hexToRgba(theme("colors.slate.300"), 0.2),
       "&:focus": {
-        boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) theme('colors.slate.300/20%')`,
+        boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
+          theme("colors.slate.300"),
+          0.2
+        )}`,
       },
       "&:hover": {
         backgroundColor: theme("colors.white"),
         borderColor: theme("colors.slate.400"),
       },
-      "&.btn-outline": {
-        backgroundColor: "transparent",
-        color: theme("colors.slate.700"),
-        borderColor: theme("colors.white"),
-        "&:hover": {
-          backgroundColor: theme("colors.white"),
-          color: theme("colors.slate.800"),
-          borderColor: theme("colors.white"),
-        },
-      },
       "@media (prefers-color-scheme: dark)": {
-        color: theme("colors.slate.200"),
+        color: theme("colors.slate.100"),
+        backgroundColor: theme("colors.slate.700"),
         borderColor: theme("colors.slate.700"),
         boxShadow: "none",
         "&:focus": {
-          boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) theme('colors.slate.600/30%')`,
+          boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
+            theme("colors.slate.600"),
+            0.3
+          )}`,
         },
         "&:hover": {
           borderColor: theme("colors.slate.600"),
@@ -162,7 +148,10 @@ module.exports = plugin(function ({ addComponents, theme }) {
       border: `1px solid transparent`,
       boxShadow: "none",
       "&:focus": {
-        boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) theme('colors.slate.300/20%')`,
+        boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
+          theme("colors.slate.300"),
+          0.2
+        )}`,
       },
       "&:hover": {
         backgroundColor: theme("colors.slate.100"),
@@ -178,7 +167,10 @@ module.exports = plugin(function ({ addComponents, theme }) {
           borderColor: theme("colors.slate.700"),
         },
         "&:focus": {
-          boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) theme('colors.slate.800/20%')`,
+          boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
+            theme("colors.slate.800"),
+            0.2
+          )}`,
         },
       },
     },
