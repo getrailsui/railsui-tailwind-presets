@@ -40,5 +40,7 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("tailwind-scrollbar")({ nocompatible: true }),
+    require("../presets/hound/headings"),
+    require("../presets/hound/buttons"),
   ],
 }
