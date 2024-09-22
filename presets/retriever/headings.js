@@ -51,10 +51,10 @@ module.exports = plugin(function ({ addComponents, theme }) {
       lineHeight: "1.12",
       fontWeight: theme("fontWeight.semibold"),
       letterSpacing: "-0.04em",
-      backgroundImage: `linear-gradient(270.09deg, ${theme(
-        "colors.primary.500"
-      )} 4.34%, ${theme("colors.secondary.800")} 122.47%)`,
+      backgroundImage:
+        "linear-gradient(270.09deg, rgb(var(--primary-500)) 4.34%, rgb(var(--secondary-800)) 122.47%)",
       backgroundClip: "text",
+      WebkitBackgroundClip: "text",
       color: theme("colors.transparent"),
       "@media (prefers-color-scheme: dark)": {
         backgroundImage: "none",
@@ -66,9 +66,8 @@ module.exports = plugin(function ({ addComponents, theme }) {
       lineHeight: "1.12",
       fontWeight: theme("fontWeight.semibold"),
       letterSpacing: "-0.035em",
-      backgroundImage: `linear-gradient(270.09deg, ${theme(
-        "colors.primary.500"
-      )} 4.34%, ${theme("colors.secondary.800")} 122.47%)`,
+      backgroundImage:
+        "linear-gradient(270.09deg, rgb(var(--primary-500)) 4.34%, rgb(var(--secondary-800)) 122.47%)",
       backgroundClip: "text",
       color: theme("colors.transparent"),
       "@media (prefers-color-scheme: dark)": {
@@ -81,9 +80,8 @@ module.exports = plugin(function ({ addComponents, theme }) {
       lineHeight: "1.12",
       fontWeight: theme("fontWeight.semibold"),
       letterSpacing: "-0.04em",
-      backgroundImage: `linear-gradient(270.09deg, ${theme(
-        "colors.primary.500"
-      )} 4.34%, ${theme("colors.secondary.800")} 122.47%)`,
+      backgroundImage:
+        "linear-gradient(270.09deg, rgb(var(--primary-500)) 4.34%, rgb(var(--secondary-800)) 122.47%)",
       backgroundClip: "text",
       color: theme("colors.transparent"),
       "@media (prefers-color-scheme: dark)": {
@@ -96,9 +94,8 @@ module.exports = plugin(function ({ addComponents, theme }) {
       lineHeight: "1.12",
       fontWeight: theme("fontWeight.semibold"),
       letterSpacing: "-0.02em",
-      backgroundImage: `linear-gradient(270.09deg, ${theme(
-        "colors.primary.500"
-      )} 4.34%, ${theme("colors.secondary.800")} 122.47%)`,
+      backgroundImage:
+        "linear-gradient(270.09deg, rgb(var(--primary-500)) 4.34%, rgb(var(--secondary-800)) 122.47%)",
       backgroundClip: "text",
       color: theme("colors.transparent"),
       "@media (prefers-color-scheme: dark)": {
@@ -111,9 +108,8 @@ module.exports = plugin(function ({ addComponents, theme }) {
       lineHeight: "1.12",
       fontWeight: theme("fontWeight.semibold"),
       letterSpacing: "-0.02em",
-      backgroundImage: `linear-gradient(270.09deg, ${theme(
-        "colors.primary.500"
-      )} 4.34%, ${theme("colors.secondary.800")} 122.47%)`,
+      backgroundImage:
+        "linear-gradient(270.09deg, rgb(var(--primary-500)) 4.34%, rgb(var(--secondary-800)) 122.47%)",
       backgroundClip: "text",
       color: theme("colors.transparent"),
       "@media (prefers-color-scheme: dark)": {
@@ -126,9 +122,8 @@ module.exports = plugin(function ({ addComponents, theme }) {
       lineHeight: "1.12",
       fontWeight: theme("fontWeight.semibold"),
       letterSpacing: "-0.02em",
-      backgroundImage: `linear-gradient(270.09deg, ${theme(
-        "colors.primary.500"
-      )} 4.34%, ${theme("colors.secondary.800")} 122.47%)`,
+      backgroundImage:
+        "linear-gradient(270.09deg, rgb(var(--primary-500)) 4.34%, rgb(var(--secondary-800)) 122.47%)",
       backgroundClip: "text",
       color: theme("colors.transparent"),
       "@media (prefers-color-scheme: dark)": {
