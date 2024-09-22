@@ -16,8 +16,8 @@ module.exports = plugin(function ({ addComponents, theme }) {
 
   const dropdown = {
     ".dropdown-menu": {
-      position: theme("position.absolute"),
-      backgroundColor: hexToRgba(theme("colors.white"), 0.9),
+      position: "absolute",
+      backgroundColor: theme("colors.white"),
       backdropFilter: theme("backdropFilter.blur.md"),
       borderRadius: theme("borderRadius.lg"),
       boxShadow: theme("boxShadow.2xl"),
