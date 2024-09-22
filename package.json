@@ -1,6 +1,6 @@
 {
   "name": "railsui-tailwind-presets",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Tailwind CSS presets for Rails UI",
   "main": "index.js",
   "scripts": {
