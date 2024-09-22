@@ -35,7 +35,7 @@ module.exports = {
           "toast-from-right 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55)",
       },
       keyframes: {
-        fadeIn: {
+        "fade-in": {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },

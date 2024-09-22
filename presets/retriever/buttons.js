@@ -80,7 +80,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
     },
     ".btn-secondary": {
       backgroundColor: `rgb(var(--secondary-500) / 1)`,
-      color: `rgb(var(--secondary-50)`,
+      color: `rgb(var(--secondary-50) / 1)`,
       "&:focus": {
         boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) rgb(var(--secondary-100) / .7)`,
       },
