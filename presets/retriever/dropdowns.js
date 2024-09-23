@@ -35,7 +35,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
       },
     },
     ".dropdown-item": {
-      padding: `${theme("spacing.1")} ${theme("spacing.3")}`,
+      padding: `${theme("spacing.2")} ${theme("spacing.3")}`,
       display: "block",
       fontWeight: theme("fontWeight.medium"),
       color: theme("colors.gray.800"),
