@@ -21,7 +21,6 @@ module.exports = plugin(function ({ addComponents, theme }) {
       backdropFilter: theme("backdropFilter.blur.md"),
       borderRadius: theme("borderRadius.lg"),
       boxShadow: theme("boxShadow.2xl"),
-      padding: `0 ${theme("spacing.2")}`,
       zIndex: theme("zIndex.50"),
       border: `1px solid ${hexToRgba(theme("colors.gray.300"), 0.8)}`,
       width: "320px",
@@ -36,8 +35,8 @@ module.exports = plugin(function ({ addComponents, theme }) {
       },
     },
     ".dropdown-item": {
-      padding: `${theme("spacing.1")} ${theme("spacing.4")}`,
-      display: theme("display.block"),
+      padding: `${theme("spacing.1")} ${theme("spacing.3")}`,
+      display: "block",
       fontWeight: theme("fontWeight.medium"),
       color: theme("colors.gray.800"),
       fontSize: "15px",
