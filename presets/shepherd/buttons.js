@@ -134,7 +134,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
       "@media (prefers-color-scheme: dark)": {
         borderColor: theme("colors.zinc.600"),
         backgroundColor: theme("colors.zinc.800"),
-
+        color: theme("colors.zinc.100"),
         "&:focus": {
           boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
             theme("colors.zinc.600"),
@@ -144,6 +144,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
         "&:hover": {
           borderColor: theme("colors.zinc.500"),
           backgroundColor: theme("colors.zinc.700"),
+          color: theme("colors.white"),
         },
       },
     },
