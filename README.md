@@ -40,6 +40,7 @@ In this example, we're using the `hound` preset, which includes the Rails UI sty
 - `hound`
 - `shepherd`
 - `retriever`
+- `setter`
 
 ## License
 
