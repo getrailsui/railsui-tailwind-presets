@@ -80,11 +80,20 @@ module.exports = plugin(function ({ addComponents, theme }) {
       color: theme("colors.white"),
       "&:focus": {
         boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
-          theme("colors.gray.900", 0.7)
-        )})`,
+          theme("colors.gray.900"),
+          0.7
+        )}`,
       },
       "&:hover": {
         backgroundColor: theme("colors.gray.900"),
+      },
+      "@media (prefers-color-scheme: dark)": {
+        "&:focus": {
+          boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
+            theme("colors.gray.800"),
+            0.3
+          )}`,
+        },
       },
     },
     ".btn-champagne": {
@@ -92,11 +101,20 @@ module.exports = plugin(function ({ addComponents, theme }) {
       color: theme("colors.champagne.50"),
       "&:focus": {
         boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
-          theme("colors.champagne.100", 0.7)
-        )})`,
+          theme("colors.champagne.100"),
+          0.7
+        )}`,
       },
       "&:hover": {
         backgroundColor: theme("colors.champagne.600"),
+      },
+      "@media (prefers-color-scheme: dark)": {
+        "&:focus": {
+          boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
+            theme("colors.champagne.500"),
+            0.2
+          )}`,
+        },
       },
     },
     ".btn-bayleaf": {
@@ -104,11 +122,20 @@ module.exports = plugin(function ({ addComponents, theme }) {
       color: theme("colors.white"),
       "&:focus": {
         boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
-          theme("colors.bayleaf.100", 0.7)
-        )})`,
+          theme("colors.bayleaf.100"),
+          0.7
+        )}`,
       },
       "&:hover": {
         backgroundColor: theme("colors.bayleaf.600"),
+      },
+      "@media (prefers-color-scheme: dark)": {
+        "&:focus": {
+          boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
+            theme("colors.bayleaf.500"),
+            0.2
+          )}`,
+        },
       },
     },
     ".btn-brick": {
@@ -116,11 +143,20 @@ module.exports = plugin(function ({ addComponents, theme }) {
       color: theme("colors.brick.50"),
       "&:focus": {
         boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
-          theme("colors.brick.100", 0.7)
-        )})`,
+          theme("colors.brick.100"),
+          0.7
+        )}`,
       },
       "&:hover": {
         backgroundColor: theme("colors.brick.600"),
+      },
+      "@media (prefers-color-scheme: dark)": {
+        "&:focus": {
+          boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
+            theme("colors.brick.500"),
+            0.2
+          )}`,
+        },
       },
     },
     ".btn-danger": {
