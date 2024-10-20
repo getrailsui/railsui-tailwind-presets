@@ -81,7 +81,7 @@ module.exports = plugin(function ({ addComponents, theme }) {
       "&:focus": {
         boxShadow: `var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) ${hexToRgba(
           theme("colors.gray.900"),
-          0.7
+          0.1
         )}`,
       },
       "&:hover": {
