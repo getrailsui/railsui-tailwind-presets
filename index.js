@@ -3,4 +3,5 @@ module.exports = {
   retriever: require("./presets/retriever"),
   setter: require("./presets/setter"),
   shepherd: require("./presets/shepherd"),
+  collie: require("./presets/collie"),
 }

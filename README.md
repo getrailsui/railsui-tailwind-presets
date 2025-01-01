@@ -1,6 +1,6 @@
 # Rails UI Tailwind CSS Presets
 
-Tailwind CSS presets for [Rails UI](https://github.com/getrailsui/railsui). These presets are designed to work with the [Tailwind CSS](https://tailwindcss.com/) framework.
+Tailwind CSS presets for [Rails UI](https://github.com/getrailsui/railsui) | [railsui.com](https://railsui.com). These presets are designed to work with the [Tailwind CSS](https://tailwindcss.com/) framework.
 
 ## Installation
 
@@ -8,6 +8,14 @@ To install the presets, run the following command in your terminal:
 
 ```bash
 npm install railsui-tailwind-presets
+```
+
+```bash
+yarn add railsui-tailwind-presets
+```
+
+```bash
+bun add railsui-tailwind-presets
 ```
 
 ## Usage
@@ -41,7 +49,13 @@ In this example, we're using the `hound` preset, which includes the Rails UI sty
 - `shepherd`
 - `retriever`
 - `setter`
+- `collie`
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more information.
+
+## Links
+
+- [Rails UI](https://railsui.com)
+- [X](https://x.com/railsui_)

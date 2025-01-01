@@ -1,6 +1,6 @@
 {
   "name": "railsui-tailwind-presets",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "Tailwind CSS presets for Rails UI",
   "main": "index.js",
   "scripts": {
@@ -16,9 +16,9 @@
   "author": "Andy Leverenz",
   "license": "MIT",
   "dependencies": {
-    "@tailwindcss/forms": "^0.5.7",
-    "@tailwindcss/typography": "^0.5.13",
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
     "tailwind-scrollbar": "^3.1.0",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.17"
   }
 }
